@@ -4,15 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src = "javascript.js"> </script>
-</head>
-<body>
-    <p> Random rock paper or scissors</p>
-    <p id = "number"> </p>
-    
-    <script>
-        Math.floor(Math.random() * 3);
+    <title>RockPaperScissors</title>
+
+    <!-- The purpose of this website is to make a simple rock paper scissors game, therefore the css code will be internal -->
+    <style>
+
+        * {
+            text-align: center;
+        }
+
+    </style>
+
+    <script> 
+        const options = ['rock', 'paper', 'scissors'];
     </script>
+</head>
+
+
+<body>
+    <div>
+        <h1> Rock Paper Scissors? </h1>
+        <p> This is a simple webpage to play some rock, paper, scissors! </p>
+        <p> Pick from the below buttons! </p>
+        <button id="rock">Rock</button>
+        <button id = "paper"> Paper </button>
+        <button id = "scissors"> Scissors </button>
+        <p id = "result"> </p>
+
+            <script>
+                const resultElement = document.getElementById("result");
+                const rockButton = document.getElementById("rock");
+                rockButton.addEventListener('click', function() 
+                {
+                    let randomNumber = Math.floor(Math.random() * 3);
+                    console.log('The computers choice is ' + options[randomNumber])
+                    if (randomNumber == 0)
+                    {
+                        console.log('This is a Tie!')
+                        resultElement.textContent = "This is a Tie"
+                    }
+                    else if (randomNumber == 1)
+                    {
+                        console.log('You lose!')
+                        resultElement.textContent = "You lose!"
+                    }
+                    else 
+                    {
+                        console.log('You win!')
+                        resultElement.textContent = "You Win!"
+                    }
+        
+                });
+
+                const paperButton = document.getElementById("paper");
+                paperButton.addEventListener('click', function() 
+                {
+                    let randomNumber = Math.floor(Math.random() * 3);
+                    console.log('The computers choice is ' + options[randomNumber])
+                    if (randomNumber == 0)
+                    {
+                        console.log('You win!')
+                        resultElement.textContent = "You Win!"
+                    }
+                    else if (randomNumber == 1)
+                    {
+                        console.log('This is a Tie!')
+                        resultElement.textContent = "This is a Tie"
+                    }
+                    else 
+                    {
+                        console.log('You lose!')
+                        resultElement.textContent = "You lose!"
+                    }
+                });
+
+                const scissorsButton = document.getElementById("scissors");
+                scissorsButton.addEventListener('click', function() 
+                {
+                    let randomNumber = Math.floor(Math.random() * 3);
+                    console.log('The computers choice is ' + options[randomNumber])
+                    if (randomNumber == 0)
+                    {
+                        console.log('You lose!')
+                        resultElement.textContent = "You lose!"
+                    }
+                    else if (randomNumber == 1)
+                    {
+                        console.log('You win!')
+                        resultElement.textContent = "You Win!"
+                    }
+                    else 
+                    {
+                        console.log('This is a Tie!')
+                        resultElement.textContent = "This is a Tie"
+                    }
+                });
+            </script>
+    </div>
+
 </body>
 </html>
