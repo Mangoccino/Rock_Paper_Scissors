@@ -4,7 +4,8 @@
 const options = ['rock', 'paper', 'scissors'];
 
 const rockButton = document.getElementById("rock");
-rockButton.addEventListener('click', function() {
+rockButton.addEventListener('click', function() 
+{
     let randomNumber = Math.floor(Math.random() * 3);
     console.log(options[randomNumber]);
 });
